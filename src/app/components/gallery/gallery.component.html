@@ -1,0 +1,9 @@
+<section>
+  <div *ngFor="let node of nodes; let i=index">
+    {{node.images.toString | json}}
+    <picture>
+      <img src={{node.images}} alt="">
+    </picture>
+    <p>{{node.title}}</p>
+  </div>
+</section>
