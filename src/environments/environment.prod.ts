@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://gus73.viveusa.mx'
+  apiUrl: 'https://www.viveusa.mx/feeds/vive-usa/mundo'
 };

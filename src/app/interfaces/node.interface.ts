@@ -5,11 +5,12 @@ export interface DrupalNodes {
 export interface DrupalNode {
   title:  string;
   url:    string;
-  images: any[] | DrupalImages;
+  images: null | DrupalImages;
 }
 
 export interface DrupalImages {
   desktop: string;
   ipad:    string;
   mobile:  string;
+  alt: string;
 }

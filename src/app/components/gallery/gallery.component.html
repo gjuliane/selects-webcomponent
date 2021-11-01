@@ -1,9 +1,21 @@
-<section>
-  <div *ngFor="let node of nodes; let i=index">
-    {{node.images.toString | json}}
-    <picture>
-      <img src={{node.images}} alt="">
-    </picture>
-    <p>{{node.title}}</p>
+<section class="viveusa-feed">
+  <div class="main-title"><h4>ViveUSA Feed</h4></div>
+  <div *ngFor="let node of nodes;">
+    <div class="title">
+      <h3><a href="{{node.url}}" target="_blank">{{node.title}}</a></h3>
+    </div>
+    <div>
+      <a href="{{node.url}}" target="_blank">
+        <picture *ngIf="node.images" class="picture">
+          <source media="(max-width:576px)"  srcset="{{node.images.mobile}}">
+          <source media="(max-width:768px)"  srcset="{{node.images.ipad}}">
+          <source media="(max-width:1100px)" srcset="{{node.images.desktop}}">
+          <img class="image"
+            src="{{node.images.desktop}}"
+            alt="{{node.images.alt}}"
+            loading="lazy">
+        </picture>
+      </a>
+    </div>
   </div>
 </section>

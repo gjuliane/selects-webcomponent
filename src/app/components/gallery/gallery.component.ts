@@ -18,9 +18,7 @@ export class GalleryComponent implements OnInit {
   constructor(private nodeService: ApiService) { }
 
   ngOnInit(): void {
-    this.nodeService.loadNodes().subscribe(nodes => this._nodes = nodes.nodes);
+    this.nodeService.loadNodes().subscribe(nodes => this._nodes = nodes);
   }
-
-
 
 }
