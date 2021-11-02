@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://gus73.viveusa.mx/feeds/vive-usa/mundo'
+  // apiUrl: 'http://gus73.viveusa.mx'
+  apiUrl: 'https://www.viveusa.mx'
 };
 
 /*
