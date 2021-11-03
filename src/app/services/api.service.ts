@@ -18,7 +18,7 @@ export class ApiService {
   default: DrupalNode[] = [];
 
   loadNodes(): Observable<DrupalNode[]> {
-    const url:string = `${this._apiUrl}/feeds/vive-usa/mundo`;
+    const url:string = `${this._apiUrl}/api/feeds/vive-usa/mundo`;
     return this.http.get<DrupalNodes>(url).pipe(
       map(response => {
         if (response.hasOwnProperty('nodes')) {
