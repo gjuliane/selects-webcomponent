@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { DrupalNode } from '../../interfaces/node.interface';
 
@@ -6,7 +6,7 @@ import { DrupalNode } from '../../interfaces/node.interface';
   selector: 'app-gallery',
   template: `
 <section class="viveusa-feed">
-  <div class="main-title"><h4>ViveUSA Feed</h4></div>
+  <div class="main-title"><h4>{{title}}</h4></div>
   <div class="content">
     <div *ngFor="let node of nodes;" class="item">
       <div class="title">
@@ -32,6 +32,7 @@ import { DrupalNode } from '../../interfaces/node.interface';
   styles: []
 })
 export class GalleryComponent implements OnInit {
+  @Input('title') title: string = '';
 
   _nodes: DrupalNode[] = [];
 
