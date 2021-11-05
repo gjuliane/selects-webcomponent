@@ -32,14 +32,14 @@ import { DrupalNode } from '../../interfaces/node.interface';
 </section>
   `,
   styles: [`
-    .content{
+    /* .content{
       display: flex;
       flex-flow: row nowrap;
       overflow-x: auto;
     }
     .item{
       flex: 1 1 auto;
-    }
+    } */
   `]
 })
 export class GalleryComponent implements OnInit {
@@ -75,7 +75,7 @@ export class GalleryComponent implements OnInit {
     const runScroll = width * this.currentItem;
     const totalScrollScope = this.wrapperContent.nativeElement.scrollWidth // Stoping signal
     const stop = (this._nodes.length * width) - viewPort;
-    console.table({runScroll, totalScrollScope, viewPort, stop});
+    // console.table({runScroll, totalScrollScope, viewPort, stop});
     if (runScroll < stop) {
       this.wrapperContent.nativeElement.scrollLeft = width * this.currentItem; // Scroll to next element
     } else {
